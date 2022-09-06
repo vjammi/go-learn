@@ -1,4 +1,4 @@
-# My Golang experiments
+# Golang Playground 
 
 ## A Tour of Go
 ### Basics
