@@ -1,3 +1,3 @@
-module github.com/vjammi/tour-of-go/methods
+module github.com/vjammi/go-learn/go-tour/methods
 
 go 1.19
