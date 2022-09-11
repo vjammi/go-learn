@@ -14,13 +14,20 @@ type Vertex struct {
 type MyFloat float64
 
 func main() {
-	v := Vertex{3, 4}
+
+	var v0 *Vertex = new(Vertex)
+	v0.X = 1
+	v0.Y = 2
+	fmt.Println(">>", v0.X, v0.Y)
+	fmt.Println("> ", v0)
+
+	v1 := Vertex{3, 4}
 
 	// Go does not have classes. However, you can define methods on types.
-	fmt.Println(v.Abs())
+	fmt.Println(v1.Abs())
 
 	// In this case a method is just a function with a receiver argument.
-	fmt.Println(Abs(v))
+	fmt.Println(Abs(v1))
 
 	// Can declare a method on non-struct types, too.
 	f := MyFloat(-math.Sqrt2)

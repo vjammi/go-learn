@@ -1,5 +1,3 @@
-# Golang Playground 
-
 ## A Tour of Go
 ### Basics
 1. Declaring variables, calling functions, and all the things you need to know before moving to the next lessons.
@@ -66,16 +64,8 @@ export PATH=$PATH:$GOROOT/bin
 11. go list // list all installed packages
 12. go run // compile temporary files and run the application
 
-## Building Rest API in golang
-Building a REST API in golang
-
-
-
-
 ## References
 https://go.dev/tour/list
 https://astaxie.gitbooks.io/build-web-application-with-golang/content/en/01.2.html
 https://stackoverflow.com/questions/66894200/error-message-go-go-mod-file-not-found-in-current-directory-or-any-parent-dire
 https://astaxie.gitbooks.io/build-web-application-with-golang/content/en/01.3.html
-
-https://github.com/TutorialEdge/go-rest-api-course
