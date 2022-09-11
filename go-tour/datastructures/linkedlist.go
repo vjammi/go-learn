@@ -90,15 +90,15 @@ func (list *linkedList) ShowBack() (int, error) {
 }
 
 func (list *linkedList) Reverse() {
-	curr := list.head
 	list.tail = list.head
-	var prev *listNode
 
-	for curr != nil {
-		temp := curr.next
-		curr.next = prev
-		prev = curr
-		curr = temp
+	current := list.head
+	var prev *listNode
+	for current != nil {
+		temp := current.next
+		current.next = prev
+		prev = current
+		current = temp
 	}
 	list.head = prev
 }
@@ -157,9 +157,9 @@ func main() {
 	fmt.Println("Length = ", list.Len())
 
 	//list.Delete(40)
-	//list.Reverse()
+	list.Reverse()
 	//fmt.Println("Length = ", list.Len())
-	//list.Show()
+	list.show()
 	//
 	//front, _ := list.ShowFront()
 	//back, _ := list.ShowBack()
