@@ -4,25 +4,25 @@ import (
 	"fmt"
 )
 
-type ListNode struct {
+type listNode struct {
 	val  int
-	next *ListNode
+	next *listNode
 }
 
 // LinkedList is a linked list
-type Linkedlist struct {
-	head   *ListNode
-	tail   *ListNode
+type linkedList struct {
+	head   *listNode
+	tail   *listNode
 	length int
 }
 
 // Len Function returns Length of the LinkedList
-func (list *Linkedlist) Len() int {
+func (list *linkedList) Len() int {
 	return list.length
 }
 
-// Add Function inserts a new ListNode at the end of the LinkedList
-func (list *Linkedlist) Add(node *ListNode) {
+// Add Function inserts a new listNode at the end of the LinkedList
+func (list *linkedList) Add(node *listNode) {
 	if list.head == nil {
 		list.head = node
 		list.tail = node
@@ -34,32 +34,59 @@ func (list *Linkedlist) Add(node *ListNode) {
 	}
 }
 
-func (list Linkedlist) Show() {
-	for list.head != nil {
+func (list *linkedList) add(val int) {
+	listNode := listNode{val: val}
+
+	if list.head == nil {
+		list.head = &listNode
+		list.tail = &listNode
+		list.length++
+	} else {
+		list.tail.next = &listNode
+		list.tail = &listNode
+		list.length++
+	}
+
+	return
+}
+
+func (list *linkedList) Show() {
+	currentNode := list.head
+	for currentNode != nil {
 		fmt.Printf("%v -> ", list.head.val)
 		list.head = list.head.next
 	}
 	fmt.Println()
 }
 
-func (list Linkedlist) ShowFront() (int, error) {
+func (list *linkedList) show() {
+	current := list.head
+
+	for current != nil {
+		fmt.Println(current.val)
+		current = current.next
+	}
+
+}
+
+func (list linkedList) ShowFront() (int, error) {
 	if list.head == nil {
 		return 0, fmt.Errorf("Cannot Find ShowFront Value in an Empty linked list")
 	}
 	return list.head.val, nil
 }
 
-func (list Linkedlist) ShowBack() (int, error) {
+func (list linkedList) ShowBack() (int, error) {
 	if list.head == nil {
 		return 0, fmt.Errorf("Cannot Find ShowFront Value in an Empty linked list")
 	}
 	return list.tail.val, nil
 }
 
-func (list *Linkedlist) Reverse() {
+func (list *linkedList) Reverse() {
 	curr := list.head
 	list.tail = list.head
-	var prev *ListNode
+	var prev *listNode
 
 	for curr != nil {
 		temp := curr.next
@@ -70,14 +97,14 @@ func (list *Linkedlist) Reverse() {
 	list.head = prev
 }
 
-func (list *Linkedlist) Delete(key int) {
+func (list *linkedList) Delete(key int) {
 	if list.head.val == key {
 		list.head = list.head.next
 		list.length--
 		return
 	}
 
-	var prev *ListNode = nil
+	var prev *listNode = nil
 	curr := list.head
 	for curr != nil && curr.val != key {
 		prev = curr
@@ -95,12 +122,12 @@ func (list *Linkedlist) Delete(key int) {
 
 func LinkedListTest3() {
 
-	list := Linkedlist{}
-	node1 := &ListNode{val: 20}
-	node2 := &ListNode{val: 30}
-	node3 := &ListNode{val: 40}
-	node4 := &ListNode{val: 50}
-	node5 := &ListNode{val: 70}
+	list := linkedList{}
+	node1 := &listNode{val: 20}
+	node2 := &listNode{val: 30}
+	node3 := &listNode{val: 40}
+	node4 := &listNode{val: 50}
+	node5 := &listNode{val: 70}
 
 	list.Add(node1)
 	list.Add(node2)
