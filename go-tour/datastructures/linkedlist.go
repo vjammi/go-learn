@@ -35,21 +35,22 @@ func (list *linkedList) Add(node *listNode) {
 }
 
 func (list *linkedList) addNode(val int) {
-	// listNode := &listNode{val: val}
-	// or
-	// listNode := new(listNode)
-	// listNode.val = val
-
-	listNode := new(listNode)
-	listNode.val = val
+	//node := &listNode{val: val}
+	//		or
+	//node := new(listNode)
+	//node.val = val
+	//		which is same as
+	//var node *listNode = new(listNode)
+	node := new(listNode)
+	node.val = val
 
 	if list.head == nil {
-		list.head = listNode
-		list.tail = listNode
+		list.head = node
+		list.tail = node
 		list.length++
 	} else {
-		list.tail.next = listNode
-		list.tail = listNode
+		list.tail.next = node
+		list.tail = node
 		list.length++
 	}
 	return
