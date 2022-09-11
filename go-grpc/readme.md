@@ -32,7 +32,21 @@ Option 2
 > C:\ds\tools\protoc-21.5-win64\bin\protoc --go_out=plugins=grpc:. chat.proto
 ```
 
+### Install protoc-gen-go (Go protocol buffer compiler plugin) in windows
+
+Here is the step by step directions:
+1. Download protoc-win32.zip from https://developers.google.com/protocol-buffers/docs/downloads
+2. Unzip and add location of the protoc.exe to your PATH environment variable
+3. Run `protoc --version` from command prompt to verify
+4. Verify the your GOPATH environment variable is set
+5. Run `go get -u github.com/golang/protobuf/protoc-gen-go` from command prompt. This should install the binary to %GOPATH%/bin
+6. Add `%GOPATH%/bin` to your PATH environment variable
+7. Open a new command prompt, navigate to your .proto file, run `protoc --go_out=. *.proto`
+
+NOTE: if you are running from a text editor or ide, you may need to reboot after modifying your environment variables
+
 ### References
 https://github.com/TutorialEdge/go-grpc-services-course
 https://tutorialedge.net/golang/go-grpc-beginners-tutorial/
 https://github.com/TutorialEdge/go-grpc-tutorial
+https://groups.google.com/g/golang-nuts/c/Qs8d56uavVs
