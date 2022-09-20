@@ -1,0 +1,6 @@
+github.com/vjammi/go-learn/raft/labgob v0.0.0-20220920040703-b6805dc4a8ba h1:nnow2zAkodLXeGdbGbrfGdT0c6EEc+UTHu2A/0TCdgc=
+github.com/vjammi/go-learn/raft/labgob v0.0.0-20220920040703-b6805dc4a8ba/go.mod h1:oQzw7l+hFTrr52nu/OOqrMkdlZ8u6Ct3WfvygOcejdc=
+github.com/vjammi/go-learn/raft/labrpc v0.0.0-20220920040703-b6805dc4a8ba h1:pzzWAe7PVC1SGp4CFHd9K5kA46xPBMQVnANrUDcQ0Jo=
+github.com/vjammi/go-learn/raft/labrpc v0.0.0-20220920040703-b6805dc4a8ba/go.mod h1:uMzwqPyBBcX0RwlRjIQ2gX70tsV2RMovGRBhAf7+5VY=
+github.com/vjammi/go-learn/raft/raft v0.0.0-20220920040703-b6805dc4a8ba h1:lE26V7sP04UtMLcLyWB6CiapW4YiEyQBkKH8Sy2NmA8=
+github.com/vjammi/go-learn/raft/raft v0.0.0-20220920040703-b6805dc4a8ba/go.mod h1:IWwJBiUHjEmUt6s1I75IIRDG5Pc1IeOBHfsAVD7m/l4=
