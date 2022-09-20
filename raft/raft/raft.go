@@ -22,7 +22,6 @@ import (
 	"fmt"
 	"github.com/vjammi/go-learn/raft/labgob"
 	"github.com/vjammi/go-learn/raft/labrpc"
-
 	//"labgob"
 	//"labrpc"
 	"log"
