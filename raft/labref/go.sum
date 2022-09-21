@@ -1,4 +1,4 @@
-github.com/vjammi/go-learn/raft/labgob v0.0.0-20220920040703-b6805dc4a8ba h1:nnow2zAkodLXeGdbGbrfGdT0c6EEc+UTHu2A/0TCdgc=
-github.com/vjammi/go-learn/raft/labgob v0.0.0-20220920040703-b6805dc4a8ba/go.mod h1:oQzw7l+hFTrr52nu/OOqrMkdlZ8u6Ct3WfvygOcejdc=
+github.com/vjammi/go-learn/raft/labgob v0.0.0-20220920045138-dd0b6f889d18 h1:YKUSXzQTqsD45iScNq6tJVSL8XiUM4F5XXsGe/iwsgs=
+github.com/vjammi/go-learn/raft/labgob v0.0.0-20220920045138-dd0b6f889d18/go.mod h1:oQzw7l+hFTrr52nu/OOqrMkdlZ8u6Ct3WfvygOcejdc=
 github.com/vjammi/go-learn/raft/labrpc v0.0.0-20220920045138-dd0b6f889d18 h1:KDceGOmg0vEgNpHOwfCv3T7AgLfZYfVlHdZ5vismwGo=
 github.com/vjammi/go-learn/raft/labrpc v0.0.0-20220920045138-dd0b6f889d18/go.mod h1:bSDagh8GypkSoYgZVI1geZN1BsPB3Ys73RM1nNi90SM=
