@@ -182,7 +182,7 @@ convert data (strings, arrays, maps, &c) to "wire format"
 RPC message diagram:
 Client             Server
 request--->
-<---response
+                   <---response
 
 Software structure
 client app        handler fns
