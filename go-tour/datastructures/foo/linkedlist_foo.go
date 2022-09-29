@@ -16,6 +16,11 @@ type linkedList1 struct {
 	length int
 }
 
+func NewLinkedList() *linkedList1 {
+	list := linkedList1{}
+	return &list
+}
+
 // Len Function returns Length of the LinkedList
 func (list *linkedList1) Len() int {
 	return list.length
@@ -96,7 +101,7 @@ func (list *linkedList1) ShowBack() (int, error) {
 
 func main() {
 
-	list := linkedList1{}
+	list := NewLinkedList()
 	node1 := &listNode{val: 20}
 	node2 := &listNode{val: 30}
 	node3 := &listNode{val: 40}

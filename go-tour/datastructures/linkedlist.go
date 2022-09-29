@@ -15,8 +15,9 @@ type linkedList struct {
 	length int
 }
 
-func (list *linkedList) len() int {
-	return list.length
+func newLinkedListNode() linkedList {
+	list := linkedList{}
+	return list
 }
 
 func (list *linkedList) addNode(val int) {
@@ -40,6 +41,10 @@ func (list *linkedList) addNode(val int) {
 		list.length++
 	}
 	return
+}
+
+func (list *linkedList) len() int {
+	return list.length
 }
 
 // Note: When we have a mix of (list *linkedList)  &&  (list linkedList)
@@ -85,6 +90,7 @@ func (list *linkedList) reverse() { // list:     *main.linkedList
 		previous = current
 		current = next
 	}
+
 	list.tail = newTail
 	list.head = previous
 }
@@ -105,17 +111,17 @@ func (list *linkedList) delete(val int) {
 		previous = current
 		current = current.next
 	}
-
 }
 
 func main() {
-	list := linkedList{}
+	list := newLinkedListNode()
+
 	list.addNode(10)
 	list.addNode(20)
 	list.addNode(30)
 	list.addNode(40)
 	list.addNode(50)
-	fmt.Println("Length = ", list.tail.val)
+	fmt.Println("Tail = ", list.tail.val)
 
 	//list.Show()
 	list.show()

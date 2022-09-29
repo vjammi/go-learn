@@ -16,7 +16,7 @@ type trie struct {
 	root *trieNode
 }
 
-func initTrie() *trie {
+func NewTrie() *trie {
 	return &trie{
 		root: &trieNode{},
 	}
@@ -66,14 +66,13 @@ Word "ans" not found in trie
 Word "san" not found in trie
 */
 func main() {
-	trie := initTrie()
-	words := []string{"sam", "john", "tim", "jose", "rose",
-		"cat", "dog", "dogg", "roses"}
+	trie := NewTrie()
+	words := []string{"sam", "john", "tim", "jose", "rose", "cat", "dog", "dogg", "roses"}
 	for i := 0; i < len(words); i++ {
 		trie.insert(words[i])
 	}
-	wordsToFind := []string{"sam", "john", "tim", "jose", "rose",
-		"cat", "dog", "dogg", "roses", "rosess", "ans", "san"}
+
+	wordsToFind := []string{"sam", "john", "tim", "jose", "rose", "cat", "dog", "dogg", "roses", "rosess", "ans", "san"}
 	for i := 0; i < len(wordsToFind); i++ {
 		found := trie.find(wordsToFind[i])
 		if found {

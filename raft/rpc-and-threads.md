@@ -1,5 +1,6 @@
 ## Package rpc 
 https://pkg.go.dev/net/rpc
+https://pkg.go.dev/net/rpc#NewServer
 
 ## 6.824 2021 Lecture 2: Infrastructure: RPC and threads
 
