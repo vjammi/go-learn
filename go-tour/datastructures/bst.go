@@ -24,7 +24,7 @@ func (bst *binarySearchTree) preOrder(node *treeNode) {
 
 func (bst *binarySearchTree) insert(node *treeNode, val int) *treeNode {
 	if node == nil {
-		node := new(treeNode)
+		node := newLinkedList(treeNode)
 		node.val = val
 		return node
 	}
@@ -41,7 +41,7 @@ func (bst *binarySearchTree) insert(node *treeNode, val int) *treeNode {
 }
 
 func main() {
-	bst := new(binarySearchTree)
+	bst := newLinkedList(binarySearchTree)
 
 	root := bst.root
 	root = bst.insert(root, 10)

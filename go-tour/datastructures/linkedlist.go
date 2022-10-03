@@ -15,20 +15,39 @@ type linkedList struct {
 	length int
 }
 
-func newLinkedListNode() linkedList {
-	list := linkedList{}
-	return list
+// list := linkedList{}
+// return list			// Will return a parameter type of linkedList
+// or
+// list := newLinkedList(linkedList)
+// return list 			// Will return a parameter type of *linkedList
+func newLinkedList() *linkedList {
+	//list := linkedList{}
+	// return list		// Will return a parameter type of linkedList
+	// or
+	list := new(linkedList)
+	return list // Will return a parameter type of *linkedList
 }
 
+// node := listNode{}
+// node.val = val
+//
+//	or
+//
+// node := newLinkedList(listNode)       				// list.head = node
+// node.val = val
+//
+//	which is similar to
+//
+// var node *listNode = newLinkedList(listNode)			// list.head = node
+// node.val = val
+//
+//	or
+//
+// node := &listNode{val: val} 							// list.head = &node
 func (list *linkedList) addNode(val int) {
-	// node := &listNode{val: val} 				// list.head = &node
-	//	 or
-	// node := new(listNode)       				// list.head = node
-	// node.val = val
-	//   is same as
-	// var node *listNode = new(listNode)		// list.head = node
-
-	node := new(listNode) // var node *listNode = new(listNode)  // list.head = node
+	// var node *listNode = newLinkedList(listNode)
+	// list.head = node
+	node := new(listNode)
 	node.val = val
 
 	if list.head == nil {
@@ -114,7 +133,7 @@ func (list *linkedList) delete(val int) {
 }
 
 func main() {
-	list := newLinkedListNode()
+	list := newLinkedList()
 
 	list.addNode(10)
 	list.addNode(20)
