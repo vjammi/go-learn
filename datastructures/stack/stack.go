@@ -68,19 +68,19 @@ func (stack *Stack) Show() (in []any) {
 	return
 }
 
-func main() {
-	//var stack Stack
-	//   or
-	stack := new(Stack)
-
-	stack.Push(1)
-	stack.Push(2)
-	stack.Push(3)
-	stack.Push(4)
-	fmt.Println("peek ", stack.Peak())
-	stack.Push(5)
-	stack.Push(6)
-	stack.Push(7)
-	fmt.Println("peek ", stack.Peak())
-	stack.Show()
-}
+//func main() {
+//	//var stack Stack
+//	//   or
+//	stack := new(Stack)
+//
+//	stack.Push(1)
+//	stack.Push(2)
+//	stack.Push(3)
+//	stack.Push(4)
+//	fmt.Println("peek ", stack.Peak())
+//	stack.Push(5)
+//	stack.Push(6)
+//	stack.Push(7)
+//	fmt.Println("peek ", stack.Peak())
+//	stack.Show()
+//}
