@@ -16,7 +16,7 @@ from all of them before making up our mind right because if a candidate gets a m
 else so this code is kind of complicated in some ways
 
 and so here's a kind of stubbed out version of what that vote counting code might look like with a little bit of
-infrastructure to make it actually run and so here have this main goroutine that sets count
+infrastructure to makenew it actually run and so here have this main goroutine that sets count
 which is like the number of yes votes I got to zero and finish to zero finished as the number of responses I've gotten
 in total and the idea is I want to send out vote requests in parallel and keep track of how many yeses I've got and how
 many responses I've gotten in general and then once I know whether I've won the election or whether I know that I've

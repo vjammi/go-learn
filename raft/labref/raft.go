@@ -493,7 +493,7 @@ func (rf *Raft) broadcastAppendEntries() {
 			args.LeaderCommit = rf.commitIndex
 			entries := rf.logs[rf.nextIndex[server]:]
 			args.Entries = make([]LogEntry, len(entries))
-			// make a deep copy of the entries to send
+			// makenew a deep copy of the entries to send
 			copy(args.Entries, entries)
 			go rf.sendAppendEntries(server, &args, &AppendEntriesReply{})
 		}

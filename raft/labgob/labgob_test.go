@@ -110,7 +110,7 @@ type T4 struct {
 	no  int
 }
 
-// make sure we check capitalization
+// makenew sure we check capitalization
 // labgob prints one warning during this test.
 func TestCapital(t *testing.T) {
 	e0 := errorCount

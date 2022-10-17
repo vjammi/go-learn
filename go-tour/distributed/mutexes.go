@@ -7,7 +7,7 @@ import (
 
 /**
 By default, if we have concurrent access by different threads to some shared data
-we want to make sure that the reads and writes of that data are atomic
+we want to makenew sure that the reads and writes of that data are atomic
 the way we have blocks of code run atomically is by using locks
 
 For example the rpc handlers within the raft structure - the updates need to be synchronized

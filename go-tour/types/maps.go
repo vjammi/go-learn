@@ -12,10 +12,10 @@ func main() {
 }
 
 /*
-Maps
+Maps -  map[K]V
 A map maps keys to values.
 The zero value of a map is nil. A nil map has no keys, nor can keys be added.
-The make function returns a map of the given type, initialized and ready for use.
+The makenew function returns a map of the given type, initialized and ready for use.
 
 We declare timezones to be a map from string to TZ (time zone)
 	timezones := map[string]TZ{
@@ -25,7 +25,7 @@ We declare timezones to be a map from string to TZ (time zone)
 
 var map1 map[string]Vertexx
 var map2 map[int]Vertexx
-var m3 map[int]string
+var map3 map[int]string
 
 func basicOperations() {
 	map1 = make(map[string]Vertexx)
@@ -36,9 +36,11 @@ func basicOperations() {
 	map2[1000] = Vertexx{40.68433, -74.39967}
 	fmt.Println(map2[1000])
 
-	m3 = make(map[int]string)
-	m3[1000] = "One Thousand"
-	fmt.Println(m3[1000])
+	map3 = make(map[int]string)
+	map3[1000] = "One Thousand"
+	fmt.Println(map3[1000])
+
+	mapLiterals()
 }
 
 /*

@@ -9,7 +9,7 @@ import "math/rand"
 So here I declare mutex that's accessible by everybody and then in the go routines I'm launching in parallel to request votes
 I'm going to and this pattern here is pretty important I'm going to first request a vote while I'm not holding the lock
 and then after wear that I'm going to grab the lock and then update these shared variables
-and then outside I have the same patterns as before except I make sure to lock and unlock between reading
+and then outside I have the same patterns as before except I makenew sure to lock and unlock between reading
 these shared variables so in an infinite loop I grab the lock and check to see if the results of the election have been
 determined by this point and if not I'm going to keep running in this infinite loop otherwise I'll unlock and then do
 what I need to do outside of here

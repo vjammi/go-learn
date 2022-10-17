@@ -56,7 +56,7 @@ func periodic1() {
 // and in this go routine which is doing some work periodically we are checking the value of done.
 // If done is set to true we terminate the go routine.
 // and since done is a shared variable, being read and mutated by multiple threads,
-// we need to make sure we guard the use of it with a lock - mu.Lock() & mu.Unlock()
+// we need to makenew sure we guard the use of it with a lock - mu.Lock() & mu.Unlock()
 // finally when done is set and unlocked, the next lock is guaranteed to observe the done of true and will terminate the thread/return
 // Now lets say, while one thread is holding thr lock, if the other thread calls the lock, that other thread will be blocked until the first one unlocks it
 // ??? Only a single thread can be executing/holding the lock of the critical section

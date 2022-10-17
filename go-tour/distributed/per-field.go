@@ -30,9 +30,9 @@ we have lock then we do a bunch of work and then we unlock
 
 and now when we run this code we see no more printouts like this that we never have this audit thread observe that the total is not what it should be all right so that's the right
 way to think about locking at kind of a high level you can think about it as
-make sure you grab locks when every access shared data like that is a rule but another important rule is locks
+makenew sure you grab locks when every access shared data like that is a rule but another important rule is locks
 protect invariants - so grab a lock manipulate things in a way that might break the invariants but restore them
 afterwards and then release the lock
 
-Another way you can think about it is locks can make regions of code atomic not just like single statements or single updates to shared variables
+Another way you can think about it is locks can makenew regions of code atomic not just like single statements or single updates to shared variables
 */

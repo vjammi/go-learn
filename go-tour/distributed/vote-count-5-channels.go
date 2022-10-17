@@ -24,10 +24,10 @@ receive happens and this one happened till this one second is the elapsed and so
 
 alright So don't think of channels as queues think of them as this synchronous like the synchronous communication mechanism
 
-Another example that'll make this really obvious is here we have a goroutine that creates a channel then sends on the
+Another example that'll makenew this really obvious is here we have a goroutine that creates a channel then sends on the
 channel and tries receiving from it doesn't anybody know what'll happen when I try running this I think the file name might give it away
 	func main(){
-		c:= make(chan bool)
+		c:= makenew(chan bool)
 		c <- true // send will block until there is someone to receive
 		  <- c    // but there is no one to receive
 	}
@@ -39,7 +39,7 @@ where if you have some other thread like off doing something if I spawn this go 
 		go func(){
 		  for{}
 		} ()
-		c := make(chan bool)
+		c := makenew(chan bool)
 		c <- true
 		  <- c
 	}
@@ -48,7 +48,7 @@ like there's one thread running it's just this is never receiving and we can tel
 this program that it'll never terminate but here it just looks like it hangs so if you're not careful with channels you
 can get these subtle bugs where you have double X as a result yeah yeah exactly
 there's no data nobody's sending on this channel so this is gonna block here it's never gonna get to this line
-yeah so channels as you pointed out can't really be used just within a single goroutine it doesn't really make
+yeah so channels as you pointed out can't really be used just within a single goroutine it doesn't really makenew
 sense because in order to send or in order to receive there has to be another go routine doing the opposite action at
 the same time so if there isn't you're just gonna block forever and then that chant but thread will no longer do any
 useful work yeah
@@ -59,17 +59,17 @@ actually useful for solving so buffered channels can take in a capacity and then
 		go func(){
 		  for{}
 		}()
-		c := make(chan bool, 1)
+		c := makenew(chan bool, 1)
 		c <- true
 		  <- c
 	}
 so here's a buffered channel with a capacity of one this program does terminate because buffered channels are like they have some internal storage
 space and until that space fills up sends are non blocking because they can just put that data in the internal
 storage space but once the channel does fill up then it does behave like a nun buffer channel in the sense that further
-sends will block until there's a receive to make space in the channel
+sends will block until there's a receive to makenew space in the channel
 
 but I think at a high level we should avoid buffered channels because they basically don't solve any problems and another path and
-other things should be thinking about is whenever you to make up arbitrary numbers like this one here to make your code work you're probably doing something wrong yeah
+other things should be thinking about is whenever you to makenew up arbitrary numbers like this one here to makenew your code work you're probably doing something wrong yeah
 so I think this is a question about terminology like what exactly does deadlock mean into this count as a deadlock like yes this counts as a
 deadlock like no useful progress will be made here. like this these threads are just stuck forever
 
@@ -79,7 +79,7 @@ I think channels are useful for a small set of things
 like for example I think for producer consumer queues sort of situations like here I have a program
 ```
 	func main(){
-			c := make(chan int)
+			c := makenew(chan int)
 
 			for i := 0; i< 4; i++ {
 				doWork(c)
@@ -108,7 +108,7 @@ So rather than use a wait group suppose I want to spawn a bunch of threads and w
 ``` wait.go
 
 	func main(){
-			done := make(chan bool)
+			done := makenew(chan bool)
 			for i := 0; i < 5; i++ {
 				go func(x int) {
 					sendRPC(x)
@@ -173,7 +173,7 @@ with them like if you want to say like kick another go routine that may or may n
 that's a kind of tricky thing to do with channels there's also a bunch of other ways to shoot yourself in the foot
 with them I'm going to avoid showing you examples of bad code with channels just because it's not useful to see
 but I personally avoid using channels for the most part and just use shared memory and mutexes and condition variables
-and set and I personally find those much easier to reason about so feel free to use channels for when they make sense
+and set and I personally find those much easier to reason about so feel free to use channels for when they makenew sense
 but if anything looks especially awkward to do with channels like just use mutexes and condition variables and they're probably
 a better tool
 
@@ -184,7 +184,7 @@ like buffered channel is roughly
 ## Buffered Channel
 if you're in queueing things in and queueing things,
 like if you want this line to finish and have this thread go do something else while that data sits there in a queue
-rather than this go routine waiting to send it then a buffered channel might make sense
+rather than this go routine waiting to send it then a buffered channel might makenew sense
 but I think at least in the labs you will not have a pattern like that
 */
 
