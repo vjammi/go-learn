@@ -18,7 +18,7 @@ type Stack struct {
 }
 
 // push add value to last index
-func (stack *Stack) push(n any) {
+func (stack *Stack) Push(n any) {
 	newNode := &Node{} // new node
 
 	newNode.Val = n
@@ -29,7 +29,7 @@ func (stack *Stack) push(n any) {
 }
 
 // pop remove last item as first output
-func (stack *Stack) pop() any {
+func (stack *Stack) Pop() any {
 	result := stack.head.Val
 	if stack.head.Next == nil {
 		stack.head = nil
@@ -42,22 +42,22 @@ func (stack *Stack) pop() any {
 }
 
 // isEmpty to check our array is empty or not
-func (stack *Stack) isEmpty() bool {
+func (stack *Stack) IsEmpty() bool {
 	return stack.length == 0
 }
 
 // len use to return length of our stack
-func (stack *Stack) len() int {
+func (stack *Stack) Len() int {
 	return stack.length
 }
 
 // peak return last input value
-func (stack *Stack) peak() any {
+func (stack *Stack) Peak() any {
 	return stack.head.Val
 }
 
 // show all value as an interface array
-func (stack *Stack) show() (in []any) {
+func (stack *Stack) Show() (in []any) {
 	current := stack.head
 
 	for current != nil {
@@ -73,14 +73,14 @@ func main() {
 	//   or
 	stack := new(Stack)
 
-	stack.push(1)
-	stack.push(2)
-	stack.push(3)
-	stack.push(4)
-	fmt.Println("peek ", stack.peak())
-	stack.push(5)
-	stack.push(6)
-	stack.push(7)
-	fmt.Println("peek ", stack.peak())
-	stack.show()
+	stack.Push(1)
+	stack.Push(2)
+	stack.Push(3)
+	stack.Push(4)
+	fmt.Println("peek ", stack.Peak())
+	stack.Push(5)
+	stack.Push(6)
+	stack.Push(7)
+	fmt.Println("peek ", stack.Peak())
+	stack.Show()
 }
