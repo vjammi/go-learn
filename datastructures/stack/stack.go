@@ -62,7 +62,7 @@ func (stack *Stack) Show() (in []any) {
 
 	for current != nil {
 		in = append(in, current.Val)
-		fmt.Println(current.Val)
+		fmt.Print(current.Val, " > ")
 		current = current.Next
 	}
 	return
