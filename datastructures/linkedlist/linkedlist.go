@@ -1,4 +1,4 @@
-package main
+package linkedlist
 
 import (
 	"fmt"
@@ -44,7 +44,7 @@ func New() *LinkedList {
 //	or
 //
 // node := &ListNode{val: val} 							// list.head = &node
-func (list *LinkedList) addNode(val int) {
+func (list *LinkedList) AddNode(val int) {
 	// var node *ListNode = newLinkedList(ListNode)
 	// list.head = node
 	node := new(ListNode)
@@ -62,13 +62,13 @@ func (list *LinkedList) addNode(val int) {
 	return
 }
 
-func (list *LinkedList) len() int {
+func (list *LinkedList) Len() int {
 	return list.length
 }
 
 // Note: When we have a mix of (list *LinkedList)  &&  (list LinkedList)
 // Go Runtime complains Struct LinkedList has methods on both value and pointer receivers. Such usage is not recommended by the Go Documentation.
-func (list *LinkedList) show() {
+func (list *LinkedList) Show() {
 	// current := list.head		//	current = current.next
 	// or
 	var current = list.head //	current = current.next
@@ -79,7 +79,7 @@ func (list *LinkedList) show() {
 	}
 }
 
-func (list *LinkedList) showFront() error {
+func (list *LinkedList) ShowFront() error {
 	if list.head == nil {
 		return fmt.Errorf("LinkedList is empty...")
 	}
@@ -87,7 +87,7 @@ func (list *LinkedList) showFront() error {
 	return nil
 }
 
-func (list *LinkedList) showBack() (int, error) {
+func (list *LinkedList) ShowBack() (int, error) {
 	if list.tail == nil {
 		return -1, fmt.Errorf("LinkedList is empty...")
 	}
@@ -95,7 +95,7 @@ func (list *LinkedList) showBack() (int, error) {
 	return list.tail.val, nil
 }
 
-func (list *LinkedList) reverse() { // list:     *main.LinkedList
+func (list *LinkedList) Reverse() { // list:     *main.LinkedList
 	var current = list.head // current:  *main.ListNode
 	var previous *ListNode  // previous: nil
 
@@ -114,7 +114,7 @@ func (list *LinkedList) reverse() { // list:     *main.LinkedList
 	list.head = previous
 }
 
-func (list *LinkedList) delete(val int) {
+func (list *LinkedList) Delete(val int) {
 	var current = list.head
 	var previous *ListNode
 
@@ -147,38 +147,38 @@ func (list *LinkedList) delete(val int) {
 //	return nil
 //}
 
-func main() {
-	list := New()
-
-	list.addNode(10)
-	list.addNode(20)
-	list.addNode(30)
-	list.addNode(40)
-	list.addNode(50)
-	fmt.Println("Tail = ", list.tail.val)
-
-	//list.Show()
-	list.show()
-	fmt.Println("Length = ", list.len())
-
-	fmt.Println("Reverse ")
-
-	list.reverse()
-	fmt.Println("Length = ", list.len())
-	list.show()
-
-	fmt.Println("Reverse ")
-	list.reverse()
-	list.show()
-
-	fmt.Println("Delete ")
-	list.delete(30)
-	fmt.Println("Length = ", list.len())
-	list.show()
-
-	fmt.Println("Front: ")
-	list.showFront()
-
-	fmt.Println("Back: ")
-	list.showBack()
-}
+//func main() {
+//	list := New()
+//
+//	list.addNode(10)
+//	list.addNode(20)
+//	list.addNode(30)
+//	list.addNode(40)
+//	list.addNode(50)
+//	fmt.Println("Tail = ", list.tail.val)
+//
+//	//list.Show()
+//	list.show()
+//	fmt.Println("Length = ", list.len())
+//
+//	fmt.Println("Reverse ")
+//
+//	list.reverse()
+//	fmt.Println("Length = ", list.len())
+//	list.show()
+//
+//	fmt.Println("Reverse ")
+//	list.reverse()
+//	list.show()
+//
+//	fmt.Println("Delete ")
+//	list.delete(30)
+//	fmt.Println("Length = ", list.len())
+//	list.show()
+//
+//	fmt.Println("Front: ")
+//	list.showFront()
+//
+//	fmt.Println("Back: ")
+//	list.showBack()
+//}
