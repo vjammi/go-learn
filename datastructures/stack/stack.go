@@ -1,4 +1,4 @@
-package main
+package stack
 
 // Source: https://github.com/TheAlgorithms/Go/blob/4d9b1e48789f24959739ef03b52b26d074a98de8/structure/stack/stack_test.go
 import (
