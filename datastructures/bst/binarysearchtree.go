@@ -13,6 +13,11 @@ type BinarySearchTree struct {
 	root *TreeNode
 }
 
+func New() *BinarySearchTree {
+	bst := new(BinarySearchTree)
+	return bst
+}
+
 func (bst *BinarySearchTree) PreOrder(node *TreeNode) {
 	if node == nil {
 		return
@@ -24,9 +29,8 @@ func (bst *BinarySearchTree) PreOrder(node *TreeNode) {
 
 func (bst *BinarySearchTree) Insert(node *TreeNode, val int) *TreeNode {
 	if node == nil {
-		node := new(TreeNode)
-		node.val = val
-		return node
+		newNode := &TreeNode{val, nil, nil}
+		return newNode
 	}
 
 	if val < node.val {
@@ -41,12 +45,15 @@ func (bst *BinarySearchTree) Insert(node *TreeNode, val int) *TreeNode {
 }
 
 //func main() {
-//	bst := new(BinarySearchTree)
+//	//bst := new(BinarySearchTree)
+//	// or
+//	bst := New()
 //
 //	root := bst.root
-//	root = bst.Insert(root, 10)
-//	root = bst.Insert(root, 5)
+//	root = bst.Insert(root, 20)
 //	root = bst.Insert(root, 15)
-//
+//	root = bst.Insert(root, 25)
+//	root = bst.Insert(root, 10)
+//	root = bst.Insert(root, 30)
 //	bst.PreOrder(root)
 //}

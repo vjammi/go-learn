@@ -1,9 +1,9 @@
 package main
 
 import (
+	"github.com/vjammi/go-learn/datastructures/bst"
 	list "github.com/vjammi/go-learn/datastructures/linkedlist"
 	"github.com/vjammi/go-learn/datastructures/stack"
-	"github.com/vjammi/go-learn/datastructures/bst"
 )
 
 func preorder() {
@@ -18,13 +18,15 @@ func preorder() {
 	stack.Push(3)
 	stack.Show()
 
-	tree := new(bst.)
-
-
-
-
 }
 
 func main() {
+	bst := new(bst.BinarySearchTree)
+
+	root = bst.Insert(root, 10)
+	root = bst.Insert(root, 5)
+	root = bst.Insert(root, 15)
+
+	bst.PreOrder(root)
 	preorder()
 }
