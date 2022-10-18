@@ -1,27 +1,26 @@
 package main
 
 import (
-	list "github.com/vjammi/go-learn/datastructures/linkedlist"
-	stack "github.com/vjammi/go-learn/datastructures/stack"
+	"fmt"
 	"github.com/vjammi/go-learn/datastructures/bst"
+	list "github.com/vjammi/go-learn/datastructures/linkedlist"
+	"github.com/vjammi/go-learn/datastructures/stack"
 )
 
-func preorder(node *bst) {
+func preorder() {
 	inOrderList := new(list.LinkedList)
-	//list.AddNode(20)
-	//list.AddNode(30)
-	//list.Show()
+	inOrderList.AddNode(20)
+	inOrderList.AddNode(30)
+	inOrderList.Show()
 
 	stack := new(stack.Stack)
-	//stack.Push(1)
-	//stack.Push(2)
-	//stack.Push(3)
-	//stack.Show()
+	stack.Push(1)
+	stack.Push(2)
+	stack.Push(3)
+	stack.Show()
 
-	current := new(bst.)
-	for {
-
-	}
+	current := new(bst.BinarySearchTree)
+	fmt.Println(current)
 
 }
 

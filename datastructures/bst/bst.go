@@ -40,13 +40,13 @@ func (bst *BinarySearchTree) Insert(node *TreeNode, val int) *TreeNode {
 	return node
 }
 
-func main() {
-	bst := new(BinarySearchTree)
-
-	root := bst.root
-	root = bst.Insert(root, 10)
-	root = bst.Insert(root, 5)
-	root = bst.Insert(root, 15)
-
-	bst.PreOrder(root)
-}
+//func main() {
+//	bst := new(BinarySearchTree)
+//
+//	root := bst.root
+//	root = bst.Insert(root, 10)
+//	root = bst.Insert(root, 5)
+//	root = bst.Insert(root, 15)
+//
+//	bst.PreOrder(root)
+//}
