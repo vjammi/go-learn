@@ -3,9 +3,10 @@ package main
 import (
 	list "github.com/vjammi/go-learn/datastructures/linkedlist"
 	stack "github.com/vjammi/go-learn/datastructures/stack"
+	"github.com/vjammi/go-learn/datastructures/bst"
 )
 
-func preorder(node *treeNode) {
+func preorder(node *bst) {
 	inOrderList := new(list.LinkedList)
 	//list.AddNode(20)
 	//list.AddNode(30)
@@ -17,7 +18,7 @@ func preorder(node *treeNode) {
 	//stack.Push(3)
 	//stack.Show()
 
-	current
+	current := new(bst.)
 	for {
 
 	}

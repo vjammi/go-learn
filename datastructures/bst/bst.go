@@ -4,35 +4,35 @@ import (
 	"fmt"
 )
 
-type treeNode struct {
+type TreeNode struct {
 	val         int
-	left, right *treeNode
+	left, right *TreeNode
 }
 
-type binarySearchTree struct {
-	root *treeNode
+type BinarySearchTree struct {
+	root *TreeNode
 }
 
-func (bst *binarySearchTree) preOrder(node *treeNode) {
+func (bst *BinarySearchTree) PreOrder(node *TreeNode) {
 	if node == nil {
 		return
 	}
 	fmt.Print(node.val, " > ")
-	bst.preOrder(node.left)
-	bst.preOrder(node.right)
+	bst.PreOrder(node.left)
+	bst.PreOrder(node.right)
 }
 
-func (bst *binarySearchTree) insert(node *treeNode, val int) *treeNode {
+func (bst *BinarySearchTree) Insert(node *TreeNode, val int) *TreeNode {
 	if node == nil {
-		node := new(treeNode)
+		node := new(TreeNode)
 		node.val = val
 		return node
 	}
 
 	if val < node.val {
-		node.left = bst.insert(node.left, val)
+		node.left = bst.Insert(node.left, val)
 	} else if val > node.val {
-		node.right = bst.insert(node.right, val)
+		node.right = bst.Insert(node.right, val)
 	} else {
 		node.val = val
 		return node
@@ -41,12 +41,12 @@ func (bst *binarySearchTree) insert(node *treeNode, val int) *treeNode {
 }
 
 func main() {
-	bst := new(binarySearchTree)
+	bst := new(BinarySearchTree)
 
 	root := bst.root
-	root = bst.insert(root, 10)
-	root = bst.insert(root, 5)
-	root = bst.insert(root, 15)
+	root = bst.Insert(root, 10)
+	root = bst.Insert(root, 5)
+	root = bst.Insert(root, 15)
 
-	bst.preOrder(root)
+	bst.PreOrder(root)
 }
