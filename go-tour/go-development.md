@@ -19,3 +19,5 @@ Precede the command with a statement to set the GOPROXY environment variable to 
     $ GOPROXY=proxy.golang.org go list -m example.com/mymodule@v0.1.0
 Developers interested in your module import a package from it and run the go get command just as they would with any other module. They can run the go get command for latest versions or they can specify a particular version, as in the following example:
     $ go get example.com/mymodule@v0.1.0
+
+### Developing and publishing modules [https://go.dev/doc/modules/developing]
