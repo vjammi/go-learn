@@ -40,6 +40,7 @@ func (stack *Stack) Pop() any {
 	}
 
 	stack.length--
+	fmt.Println("Node being popped: ", node.Val)
 	return node
 }
 
@@ -56,6 +57,7 @@ func (stack *Stack) Len() int {
 // peak return last input value
 func (stack *Stack) Peak() any {
 	node := stack.head
+	fmt.Println("Node being peeked: ", node.Val)
 	return node
 }
 

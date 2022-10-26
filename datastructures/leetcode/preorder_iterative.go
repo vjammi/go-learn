@@ -85,14 +85,14 @@ func preorderIterative(node *TreeNode) []int {
 
 	for !stack.IsEmpty() { // || poppedNode != nil
 		//fmt.Print(node.Val, " > ")
-		var poppedNode = stack.Pop()
+		poppedNode := stack.Pop()
 		//poppedNode := stack.Pop()
 		fmt.Println(poppedNode)
 		//result = append(result, poppedNode)
 		//result[i] = poppedNode.Val
 		i++
 		if poppedNode != nil {
-			stack.Push(poppedNode)
+			stack.Push(poppedNode.Left)
 			//	//stack = append(stack, poppedNode.Right)
 		}
 		if poppedNode != nil {
