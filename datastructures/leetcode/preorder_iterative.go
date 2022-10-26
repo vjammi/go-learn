@@ -89,7 +89,7 @@ func preorderIterative(node *TreeNode) []int {
 		result = append(result, node.Val)
 		//result[i] = node.Val
 		i++
-		if current.Right != nil {
+		if current..Right != nil {
 			stack.Push(current)
 			stack = append(stack, node.Right)
 		}
