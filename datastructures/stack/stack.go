@@ -6,20 +6,20 @@ import (
 )
 
 // Node structure
-type Node struct {
+type TreeNode struct {
 	Val  any
-	Next *Node
+	Next *TreeNode
 }
 
 // Stack has just head of node and with length
 type Stack struct {
-	head   *Node
+	head   *TreeNode
 	length int
 }
 
 // push add value to last index
 func (stack *Stack) Push(n any) {
-	newNode := &Node{} // new node
+	newNode := &TreeNode{} // new node
 
 	newNode.Val = n
 	newNode.Next = stack.head
