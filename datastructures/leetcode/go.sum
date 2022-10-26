@@ -6,3 +6,5 @@ github.com/vjammi/go-learn/datastructures/linkedlist v0.0.0-20221017235728-1f49d
 github.com/vjammi/go-learn/datastructures/linkedlist v0.0.0-20221017235728-1f49dd31af83/go.mod h1:26ES5g3vqGfTC6z5eKS/RDfyJSzL5CCMfrckErw6oho=
 github.com/vjammi/go-learn/datastructures/stack v0.0.0-20221017234120-5a24b655aeb9 h1:4k7AgA3hVSMuRgFBDNOiSO/NJ3wYI6LGN/th6QzspIs=
 github.com/vjammi/go-learn/datastructures/stack v0.0.0-20221017234120-5a24b655aeb9/go.mod h1:+jPtQwyuRPBZX8lai9PkHglUWm/hkUiTnNhBWTc8rfQ=
+github.com/vjammi/go-learn/datastructures/stack v0.0.0-20221026052610-59c83845aed2 h1:QEF2jplIlflxBRKBbdEd/fi7uRMRbtgO9/5OQ9Q3z0Q=
+github.com/vjammi/go-learn/datastructures/stack v0.0.0-20221026052610-59c83845aed2/go.mod h1:+jPtQwyuRPBZX8lai9PkHglUWm/hkUiTnNhBWTc8rfQ=

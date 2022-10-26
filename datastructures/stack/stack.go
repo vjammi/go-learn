@@ -35,7 +35,8 @@ func (stack *Stack) Pop() any {
 	if stack.head.Next == nil {
 		stack.head = nil
 	} else {
-		stack.head.Val, stack.head.Next = stack.head.Next.Val, stack.head.Next.Next
+		//stack.head.Val, stack.head.Next = stack.head.Next.Val, stack.head.Next.Next
+		stack.head, stack.head.Next = stack.head.Next, stack.head.Next.Next
 	}
 
 	stack.length--
