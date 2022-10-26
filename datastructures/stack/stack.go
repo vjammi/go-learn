@@ -30,7 +30,8 @@ func (stack *Stack) Push(n any) {
 
 // pop remove last item as first output
 func (stack *Stack) Pop() any {
-	result := stack.head.Val
+	//result := stack.head.Val
+	result := stack.head
 	if stack.head.Next == nil {
 		stack.head = nil
 	} else {
@@ -53,7 +54,7 @@ func (stack *Stack) Len() int {
 
 // peak return last input value
 func (stack *Stack) Peak() any {
-	return stack.head.Val
+	return stack.head
 }
 
 // show all value as an interface array

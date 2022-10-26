@@ -1,4 +1,17 @@
-### Publishing a module [https://go.dev/doc/modules/publishing]
+### Install Go
+https://go.dev/doc/tutorial/getting-started#install
+
+#### Download and install
+https://go.dev/doc/install
+
+### Create a Go module
+Reference: https://go.dev/doc/tutorial/create-module
+
+### Get started with Go
+https://go.dev/doc/tutorial/getting-started
+
+### Publishing a module 
+Reference: https://go.dev/doc/modules/publishing
 Steps to publish a module.
 Open a command prompt and change to your module’s root directory in the local repository.
 Run go mod tidy, which removes any dependencies the module might have accumulated that are no longer necessary.
@@ -20,4 +33,28 @@ Precede the command with a statement to set the GOPROXY environment variable to 
 Developers interested in your module import a package from it and run the go get command just as they would with any other module. They can run the go get command for latest versions or they can specify a particular version, as in the following example:
     $ go get example.com/mymodule@v0.1.0
 
-### Developing and publishing modules [https://go.dev/doc/modules/developing]
+### Overview of module development - Developing and publishing modules 
+Reference: https://go.dev/doc/modules/developing
+
+### Workflow for developing and publishing modules
+Reference: https://go.dev/doc/modules/developing#workflow
+
+### High-level module development workflow including publishing - Module release and versioning workflow
+Reference: https://go.dev/doc/modules/release-workflow
+
+### Start a module that others can use
+Reference: https://go.dev/doc/tutorial/create-module#start
+
+
+
+### Managing dependencies
+Reference: https://go.dev/doc/modules/managing-dependencies
+
+### Design and development
+Reference: https://go.dev/doc/modules/developing#design
+
+### Package discovery
+https://go.dev/doc/modules/developing#discovery
+
+### Search Packages or Symbols
+https://pkg.go.dev/
