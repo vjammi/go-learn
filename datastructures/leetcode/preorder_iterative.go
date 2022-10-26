@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"github.com/vjammi/go-learn/datastructures/stack"
 )
 
 type TreeNode struct {
@@ -79,24 +78,24 @@ func preorderIterative(node *TreeNode) []int {
 	i := 0
 	result := make([](int), 0)
 	//stack := make([](*TreeNode), 0)
-	stack := new(stack.Stack)
+	stack := new(Stack)
 	//stack = append(stack, node)
 	stack.Push(node)
 
-	for stack.Len() > 0 { // || node != nil
-		fmt.Print(node.Val, " > ")
-		current := stack.Pop()
-		result = append(result, node.Val)
-		//result[i] = node.Val
+	for stack.Len() > 0 { // || poppedNode != nil
+		//fmt.Print(node.Val, " > ")
+		//poppedNode := stack.Pop()
+		//result = append(result, poppedNode)
+		////result[i] = poppedNode.Val
 		i++
-		if current.Right != nil {
-			stack.Push(current)
-			//stack = append(stack, node.Right)
-		}
-		if node.Left != nil {
-			//stack = append(stack, node.Left)
-			stack.Push(current)
-		}
+		//if poppedNode != nil {
+		//	stack.Push(poppedNode.)
+		//	//stack = append(stack, poppedNode.Right)
+		//}
+		//if poppedNode.Left != nil {
+		//	//stack = append(stack, poppedNode.Left)
+		//	stack.Push(poppedNode)
+		//}
 	}
 	return result
 }
