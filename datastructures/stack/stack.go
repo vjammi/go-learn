@@ -31,16 +31,17 @@ func (stack *Stack) Push(n any) {
 // pop remove last item as first output
 func (stack *Stack) Pop() any {
 	//node := stack.head.Val
-	node := stack.head
+	node := stack.head.Val
 	if stack.head.Next == nil {
 		stack.head = nil
 	} else {
 		//stack.head.Val, stack.head.Next = stack.head.Next.Val, stack.head.Next.Next
-		stack.head, stack.head.Next = stack.head.Next, stack.head.Next.Next
+		stack.head.Val = stack.head.Next.Val
+		stack.head.Next = stack.head.Next.Next
 	}
 
 	stack.length--
-	fmt.Println("Node popped: ", node.Val)
+	fmt.Println("Node Popped: ", node)
 	return node
 }
 
@@ -56,8 +57,8 @@ func (stack *Stack) Len() int {
 
 // peak return last input value
 func (stack *Stack) Peak() any {
-	node := stack.head
-	fmt.Println("Node peeked: ", node.Val)
+	node := stack.head.Val
+	fmt.Println("Node Peeked: ", node)
 	return node
 }
 
