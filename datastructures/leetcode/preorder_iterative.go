@@ -91,11 +91,11 @@ func preorderIterative(node *TreeNode) []int {
 		//result = append(result, poppedNode)
 		//result[i] = poppedNode.Val
 		i++
-		if poppedNode.Left != nil {
+		if poppedNode != nil {
 			stack.Push(poppedNode)
 			//	//stack = append(stack, poppedNode.Right)
 		}
-		if poppedNode.Right != nil {
+		if poppedNode != nil {
 			//stack = append(stack, poppedNode.Left)
 			stack.Push(poppedNode)
 		}
