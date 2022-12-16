@@ -15,38 +15,19 @@ type LinkedList struct { // List
 	length int
 }
 
-// list := LinkedList{}
-// return list			// Will return a parameter type of LinkedList
-// or
-// list := newLinkedList(LinkedList)
-// return list 			// Will return a parameter type of *LinkedList
 func New() *LinkedList {
-	//list := LinkedList{}
-	// return list		// Will return a parameter type of LinkedList
-	// or
+	//var list *LinkedList = new(LinkedList)
+	//return list
+
 	list := new(LinkedList)
 	return list // Will return a parameter type of *LinkedList
 }
 
-// node := ListNode{}
-// node.val = val
-//
-//	or
-//
-// node := newLinkedList(ListNode)       				// list.head = node
-// node.val = val
-//
-//	which is similar to
-//
-// var node *ListNode = newLinkedList(ListNode)			// list.head = node
-// node.val = val
-//
-//	or
-//
-// node := &ListNode{val: val} 							// list.head = &node
 func (list *LinkedList) AddNode(val int) {
-	// var node *ListNode = newLinkedList(ListNode)
-	// list.head = node
+	// node := ListNode{}
+	// node := &ListNode{val: 1}
+	// var node *ListNode = new(ListNode)
+
 	node := new(ListNode)
 	node.val = val
 
@@ -131,54 +112,3 @@ func (list *LinkedList) Delete(val int) {
 		current = current.next
 	}
 }
-
-//func (node *ListNode) next() *ListNode {
-//	if p := node.next; node.next != nil && p := node.next() {
-//		return p
-//	}
-//	return nil
-//}
-
-//// Next returns the next list element or nil.
-//func (e *Element) Next() *Element {
-//	if p := e.next; e.list != nil && p != &e.list.root {
-//		return p
-//	}
-//	return nil
-//}
-
-//func main() {
-//	list := New()
-//
-//	list.addNode(10)
-//	list.addNode(20)
-//	list.addNode(30)
-//	list.addNode(40)
-//	list.addNode(50)
-//	fmt.Println("Tail = ", list.tail.val)
-//
-//	//list.Show()
-//	list.show()
-//	fmt.Println("Length = ", list.len())
-//
-//	fmt.Println("Reverse ")
-//
-//	list.reverse()
-//	fmt.Println("Length = ", list.len())
-//	list.show()
-//
-//	fmt.Println("Reverse ")
-//	list.reverse()
-//	list.show()
-//
-//	fmt.Println("Delete ")
-//	list.delete(30)
-//	fmt.Println("Length = ", list.len())
-//	list.show()
-//
-//	fmt.Println("Front: ")
-//	list.showFront()
-//
-//	fmt.Println("Back: ")
-//	list.showBack()
-//}
