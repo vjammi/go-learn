@@ -1,7 +1,5 @@
 package queue
 
-import "fmt"
-
 // Queue Linked-List
 
 // Node will be store the value and the next node as well
@@ -69,17 +67,4 @@ func (queue *Queue) frontQueue() any {
 // backQueue it will return the back data
 func (queue *Queue) backQueue() any {
 	return queue.tail.val
-}
-
-func main() {
-	queue := new(Queue)
-	queue.enqueue("1")
-	queue.enqueue("2")
-	queue.enqueue("3")
-	queue.enqueue("4")
-	queue.enqueue("5")
-	queue.enqueue("6")
-	queue.enqueue("7")
-	queue.enqueue("8")
-	fmt.Print(queue)
 }
