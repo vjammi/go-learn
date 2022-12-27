@@ -12,6 +12,7 @@ package main
 //}
 
 func main() {
+	// queue := New(Queue)
 	//fmt.Println("Queue Impl in Golang")
 	//que := New(Queue)
 	//que.Enqueue("1")
