@@ -15,8 +15,8 @@ type Queue struct {
 
 func main() {
 	fmt.Println("Queue Impl in Golang")
-	queue := new(Queue)
-	queue.Enqueue("1")
+	que := new(Queue)
+	que.Enqueue("1")
 	//queue.Enqueue("2")
 	// queue.enqueue("3")
 	// queue.enqueue("4")
