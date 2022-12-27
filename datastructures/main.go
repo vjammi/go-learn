@@ -1,22 +1,20 @@
 package main
 
-import "fmt"
-
-type QueueNode struct {
-	val  any
-	Next *QueueNode
-}
-
-type Queue struct {
-	head   *QueueNode
-	tail   *QueueNode
-	length int
-}
+//type QueueNode struct {
+//	val  any
+//	Next *QueueNode
+//}
+//
+//type Queue struct {
+//	head   *QueueNode
+//	tail   *QueueNode
+//	length int
+//}
 
 func main() {
-	fmt.Println("Queue Impl in Golang")
-	que := new(Queue)
-	que.Enqueue("1")
+	//fmt.Println("Queue Impl in Golang")
+	//que := New(Queue)
+	//que.Enqueue("1")
 	//queue.Enqueue("2")
 	// queue.enqueue("3")
 	// queue.enqueue("4")
@@ -24,5 +22,5 @@ func main() {
 	// queue.enqueue("6")
 	// queue.enqueue("7")
 	// queue.enqueue("8")
-	fmt.Print(queue)
+	//fmt.Print(que)
 }

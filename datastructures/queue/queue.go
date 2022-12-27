@@ -13,6 +13,14 @@ type Queue struct {
 	length int
 }
 
+func New() *Queue {
+	//var queue *Queue = new(Queue)
+	//return list
+
+	queue := new(Queue)
+	return queue // Will return a parameter type of *Queue
+}
+
 // enqueue it will be added new value into queue
 func (queue *Queue) Enqueue(n any) {
 	//var newNode *QueueNode // When pointer tto the QueueNode is used, we use newNode, instead of &newNode  ***
