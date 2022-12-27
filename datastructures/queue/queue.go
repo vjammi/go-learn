@@ -2,25 +2,25 @@ package queue
 
 import "fmt"
 
-// Queue Linked-List
-
-// Node will be store the value and the next node as well
-type Node struct {
+// Queue
+// QueueNode will store the value and the next node as well
+type QueueNode struct {
 	val  any
-	Next *Node
+	Next *QueueNode
 }
 
 // Queue structure is tell us what our head is and what tail should be with length of the list
 type Queue struct {
-	head   *Node
-	tail   *Node
+	head   *QueueNode
+	tail   *QueueNode
 	length int
 }
 
 // enqueue it will be added new value into queue
 func (queue *Queue) enqueue(n any) {
-	var newNode Node // create new Node
-	newNode.val = n  // set the data
+	//var newNode *QueueNode // When pointer tto the QueueNode is used, we use newNode, instead of &newNode  ***
+	var newNode QueueNode // create new QueueNode
+	newNode.val = n       // set the data
 
 	if queue.tail != nil {
 		queue.tail.Next = &newNode

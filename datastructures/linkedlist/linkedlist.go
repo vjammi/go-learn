@@ -4,12 +4,12 @@ import (
 	"fmt"
 )
 
-type ListNode struct { // Element
+type ListNode struct {
 	val  int
 	next *ListNode
 }
 
-type LinkedList struct { // List
+type LinkedList struct {
 	head   *ListNode
 	tail   *ListNode
 	length int
@@ -90,7 +90,6 @@ func (list *LinkedList) Reverse() { // list:     *main.LinkedList
 		previous = current
 		current = next
 	}
-
 	list.tail = newTail
 	list.head = previous
 }

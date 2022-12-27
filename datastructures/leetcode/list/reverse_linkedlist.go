@@ -53,16 +53,19 @@ func (list *LinkedList) reverseList() {
 
 func reverseList(head *ListNode) *ListNode {
 	var curr *ListNode
-	curr = head
 	var prev *ListNode
 	var next *ListNode
+	curr = head
 
 	for curr != nil {
 		next = curr.Next
+
 		curr.Next = prev
+
 		prev = curr
 		curr = next
 	}
+
 	head = prev
 	return head
 }
