@@ -1,8 +1,5 @@
 package queue
 
-import "fmt"
-
-// Queue
 // QueueNode will store the value and the next node as well
 type QueueNode struct {
 	val  any
@@ -17,7 +14,7 @@ type Queue struct {
 }
 
 // enqueue it will be added new value into queue
-func (queue *Queue) enqueue(n any) {
+func (queue *Queue) Enqueue(n any) {
 	//var newNode *QueueNode // When pointer tto the QueueNode is used, we use newNode, instead of &newNode  ***
 	var newNode QueueNode // create new QueueNode
 	newNode.val = n       // set the data
@@ -35,8 +32,8 @@ func (queue *Queue) enqueue(n any) {
 }
 
 // dequeue it will be removed the first value into queue (First In First Out)
-func (queue *Queue) dequeue() any {
-	if queue.isEmpty() {
+func (queue *Queue) Dequeue() any {
+	if queue.IsEmpty() {
 		return -1 // if is empty return -1
 	}
 	data := queue.head.val
@@ -52,34 +49,21 @@ func (queue *Queue) dequeue() any {
 }
 
 // isEmpty it will check our list is empty or not
-func (queue *Queue) isEmpty() bool {
+func (queue *Queue) IsEmpty() bool {
 	return queue.length == 0
 }
 
 // len is return the length of queue
-func (queue *Queue) len() int {
+func (queue *Queue) Len() int {
 	return queue.length
 }
 
 // frontQueue it will return the front data
-func (queue *Queue) frontQueue() any {
+func (queue *Queue) FrontQueue() any {
 	return queue.head.val
 }
 
 // backQueue it will return the back data
-func (queue *Queue) backQueue() any {
+func (queue *Queue) BackQueue() any {
 	return queue.tail.val
-}
-
-func main() {
-	queue := new(Queue)
-	queue.enqueue("1")
-	queue.enqueue("2")
-	queue.enqueue("3")
-	queue.enqueue("4")
-	queue.enqueue("5")
-	queue.enqueue("6")
-	queue.enqueue("7")
-	queue.enqueue("8")
-	fmt.Print(queue)
 }
