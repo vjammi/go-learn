@@ -1,11 +1,8 @@
 package main
 
-import (
-	"fmt"
-	"testing"
-)
+import "fmt"
 
-func Test(t *testing.T) {
+func main() {
 	list := New()
 	list.AddNode(10)
 	list.AddNode(20)
