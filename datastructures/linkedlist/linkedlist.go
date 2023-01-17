@@ -16,8 +16,11 @@ type LinkedList struct {
 }
 
 func New() *LinkedList {
-	//var list *LinkedList = new(LinkedList)
-	//return list
+	// list := LinkedList{}
+	// list := &LinkedList{head: nil, tail: nil, length: 0}
+	// var list *LinkedList = new(LinkedList)
+	// list := new(LinkedList)
+	// return list
 
 	list := new(LinkedList)
 	return list // Will return a parameter type of *LinkedList
@@ -27,6 +30,7 @@ func (list *LinkedList) AddNode(val int) {
 	// node := ListNode{}
 	// node := &ListNode{val: 1}
 	// var node *ListNode = new(ListNode)
+	// node := new(ListNode)
 
 	node := new(ListNode)
 	node.val = val
