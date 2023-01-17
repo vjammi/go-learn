@@ -8,7 +8,6 @@ SOLID
 4. Interface Segregation Principle
 5. Dependency Inversion Principle
 
-
-1. Single Responsibility Principle
+Single Responsibility Principle
 A class should have one and only one reason to change
  - Go has a more powerful notion of composition

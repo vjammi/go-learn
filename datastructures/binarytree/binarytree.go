@@ -1,6 +1,6 @@
 // Template for the binary tree
 
-package main
+package binarytree
 
 // BinaryTree type struct
 type BinaryTree struct {

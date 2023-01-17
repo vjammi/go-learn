@@ -1,4 +1,4 @@
-package main
+package queue
 
 // QueueNode will store the value and the next node as well
 type QueueNode struct {

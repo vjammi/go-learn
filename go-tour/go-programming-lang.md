@@ -5,37 +5,39 @@ https://youtu.be/rKnDgT73v8s
 Though designed for a systems language, it has much broader use.
 
 ### Goals of the lang
-- Efficiencies of a statically typed compiled lang
-- Ease of a programming of a dynamic language
-- It critical that lang be type-safe and memory-safe
-- Good support for concurrency and communication, these 2 can help software on the network, or on multicore cpus
+- Statically typed, compiled lang with ease of programming of a dynamically typed language
+- Its type-safe and memory-safe
+- Has good support for concurrency and communication 
+- These 2 goals can help software on the network, or on multicore cpus
 - Efficient, latency-free garbage collection
-- We want it to be garbage collected. Lots of bookkeeping that has in modern programming. lang, specially in C/C++ has 
+  We want it to be garbage collected. Lots of bookkeeping that has in modern programming lang, specially in C/C++ has 
   to be to do with memory management, that can be totally automated. you can do that efficiently and latency free. 
   You can derive a bad address and then use it
-- Garbage collection has got to a point where garbage collection systems lang make a lot of sense.
-- High Speed compilation
-- Also we want the compilations to run fast.
-- You want carriage return times for compilations. 
+  Garbage collection has got to a point where garbage collection systems lang make a lot of sense.
+- High Speed compilation 
+  Also we want the compilations to run fast - carriage return times for compilations. 
 
 ### Design Principles
 https://youtu.be/rKnDgT73v8s?t=694
-Avoid bookkeeping
+- Avoid bookkeeping
 	Go is more object-oriented lang than java or C++
 	No Type Hierarchy ???
 
-### Big Picture
+### Big Picture 
 https://youtu.be/rKnDgT73v8s?t=802
+
 #### Fundamentals
 - Clean and concise syntax
 - lightweight type system
-- No implicit conversations: keep things explicit
-Untyped un-sized constants
-Strict separation of interface and implementation
+- No implicit conversations [typecasting ???]: keep things explicit
+- Untyped un-sized constants
+- Strict separation of interface and implementation
+
 #### Runtime
 Garbage collected
 Good support for strings, maps, communication channels
 Concurrency
+
 #### Package Model
 Explicit dependencies to enable faster builds
 New approach to dependencies and dependency trees

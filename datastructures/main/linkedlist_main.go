@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/vjammi/go-learn/datastructures/linkedlist"
+)
 
 func main() {
-	list := New()
+	list := linkedlist.New()
 	list.AddNode(10)
 	list.AddNode(20)
 	list.AddNode(30)

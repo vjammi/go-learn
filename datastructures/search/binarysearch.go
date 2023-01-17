@@ -1,4 +1,4 @@
-package main
+package search
 
 import (
 	"errors"
@@ -66,17 +66,18 @@ func binarySearchIterative(arr []int, target int) (int, error) {
 	return -1, nil
 }
 
-//         num     33
-//         nums   [44, 55, 66, 77, 88, 99, 1, 11, 22, 33  33]
-//            i    0   1   2   3   4   5   6  7   8   9   10
-//                 ^                                      ^
-//          mid                        ^
-//                                                ^
-//                                                    ^
-//                                                 33 found
-//        0+(11-0)/2   = 0+11/2   = 5
-//        6+(10-6)/2   = 6+4/2    = 8
-//        9+(10-9)/2   = 9+1/2    = 9
+//	num     33
+//	nums   [44, 55, 66, 77, 88, 99, 1, 11, 22, 33  33]
+//	   i    0   1   2   3   4   5   6  7   8   9   10
+//	        ^                                      ^
+//	 mid                        ^
+//	                                       ^
+//	                                           ^
+//	                                        33 found
+//
+// 0+(11-0)/2   = 0+11/2   = 5
+// 6+(10-6)/2   = 6+4/2    = 8
+// 9+(10-9)/2   = 9+1/2    = 9
 func searchInARotatedArray() {
 
 }

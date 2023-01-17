@@ -1,17 +1,18 @@
 ## A Tour of Go
+
 ### Basics
-1. Declaring variables, calling functions, and all the things you need to know before moving to the next lessons.
+1. Declaring variables, calling functions
 2. Packages, variables, and functions.
-3. Flow control statements: for, if, else, switch and defer - Learn how to control the flow of your code with conditionals, loops, switches and defers.
+3. Flow control statements: for, if, else, switch and defer - how to control the flow of code with conditionals, loops, switches and defers.
 4. More types: structs, slices, and maps - Learn how to define types based on existing ones: this lesson covers structs, arrays, slices, and maps.
 
 ### Methods and interfaces
-Learn how to define methods on types, how to declare interfaces, and how to put everything together.
-1. Methods and interfaces. This lesson covers methods and interfaces, the constructs that define objects and their behavior.
+Define methods on types, declare interfaces
+1. Methods and interfaces. This covers methods and interfaces, constructs that define objects and their behavior.
 
 ### Generics
-Learn how to use type parameters in Go functions and structs.
-1. Generics - Go supports generic programming using type parameters. This lesson shows some examples for employing generics in your code.
+Using type parameters in Go functions and structs.
+1. Generics - Go supports generic programming using type parameters. Shows some examples for employing generics in your code.
 
 ### GO Installation
 Installation
@@ -39,7 +40,7 @@ export PATH=$PATH:$GOROOT/bin
 - Install remote packages
 
 ### Go Modules 
-- Create a module  
+- Create a module
   - ```go mod init <module_name>```
 - Check if GO111MODULE value is set to "auto" by running ```go env```
 - If not set to "auto" set it using ```go env -w GO111MODULE=auto```
@@ -57,8 +58,9 @@ export PATH=$PATH:$GOROOT/bin
 5. go install
    compile and install packages and dependencies
 6. godoc
-7. 
-8. go fix // upgrade code from an old version before go1 to a new version after go1
+   ,,,
+8. go fix 
+   upgrade code from an old version before go1 to a new version after go1
 9. go version // get information about your version of Go
 10. go env // view environment variables about Go
 11. go list // list all installed packages

@@ -1,4 +1,4 @@
-package main
+package binarytree
 
 type BinaryTreeNode struct {
 	data  int
