@@ -1,0 +1,4 @@
+github.com/vjammi/go-learn/go-cicd/sumup v0.0.0-20230122043044-a2e662f89da0 h1:BVGr7uTpZ9TXiwSkmkjaBcj7OBzIzQI6hq2H2PEAkXQ=
+github.com/vjammi/go-learn/go-cicd/sumup v0.0.0-20230122043044-a2e662f89da0/go.mod h1:oHCe1lpKnkT86FWcI9mPOGLxMhJlD/75FR7DdRtpDVE=
+github.com/vjammi/go-learn/go-tour/mr v0.0.0-20230122043044-a2e662f89da0 h1:R7y9XGbIfdEGZhTWGcAIUF6S2WeiCe+WjJNsB0ZlBJI=
+github.com/vjammi/go-learn/go-tour/mr v0.0.0-20230122043044-a2e662f89da0/go.mod h1:EfiaJenrDX/GrAOeLNJD6U26dbJ7+fPJPhVUNVo+rUY=
