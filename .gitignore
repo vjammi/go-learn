@@ -9,3 +9,11 @@ go-rest-api/
 mit-6.824-labs/
 /reference/
 /go-tour/main/
+/go-cicd/tools/
+/go-cicd/.gitignore
+/go-cicd/.gitlab-ci.yml
+/go-cicd/Dockerfile
+/go-cicd/LICENSE
+/go-cicd/main.go
+/go-cicd/Makefile
+/go-cicd/README.md
