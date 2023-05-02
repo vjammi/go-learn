@@ -12,10 +12,12 @@ func main() {
 
 	go func() {
 		count2("sheep", &wg)
-		wg.Done() // We can then decrement the counter after the go routine finishes
+		// wg.Done() // Done decrements the WaitGroup counter by one. We can then decrement the counter after the go routine finishes
 	}()
 
-	wg.Wait() // This will wait until count is 0. If any goroutine has not finished it wil wait
+	fmt.Println("WaitGroup counter is not zero. Waiting for the wait group counter to be zero")
+	wg.Wait() // Wait blocks until the WaitGroup counter is zero. This will wait until count is 0. If any goroutine has not finished it wil wait
+	fmt.Println("WaitGroup counter is now zero")
 }
 
 // Notice that we could also pass a pointer to the Waitgroup as an argument to the count function,
@@ -29,5 +31,7 @@ func count2(thing string, wg *sync.WaitGroup) {
 		fmt.Println(i, thing)
 		time.Sleep(time.Millisecond * 500)
 	}
-	// wg.Done() // We can then decrement the counter, when the go routine finishes
+	fmt.Println("Finished Counting.")
+	wg.Done() // Done decrements the WaitGroup counter by one. We can then decrement the counter, when the go routine finishes
+	fmt.Println("Decrementing the WaitGroup counter by 1.")
 }

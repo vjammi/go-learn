@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	butWhyPointers()
-	//pointers()
+	pointers()
 }
 
 // Reference: https://youtu.be/4B2rwYvuiBo

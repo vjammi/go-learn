@@ -25,6 +25,7 @@ func writing_switch() {
 	fmt.Print("Go is running on ")
 
 	switch os := runtime.GOOS; os {
+
 	case "darwin":
 		fmt.Println("OS X.")
 	case "linux":
@@ -50,6 +51,7 @@ case f():
 does not call f if i==0.)
 */
 func switch_eval_order() {
+
 	fmt.Println("When's Saturday?")
 	today := time.Now().Weekday()
 	switch time.Saturday {
@@ -62,6 +64,7 @@ func switch_eval_order() {
 	default:
 		fmt.Println("Too far away.")
 	}
+
 }
 
 /*

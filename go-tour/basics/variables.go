@@ -23,6 +23,10 @@ func basicVariableDeclaration() {
 	var x int
 	var s string
 	var p Person // Assuming type Person struct {}
+	person := Person{Name: "Green", Age: 25, personID: 12345}
+
+	fmt.Println(p)
+	fmt.Println(person, person.Name, person.Age)
 
 	// Assignment of a value to a variable
 	x = 3

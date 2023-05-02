@@ -7,12 +7,9 @@ import (
 )
 
 /*
-So far count has been outputting to he terminal,
-but what if we have to communicate back to the go routine
+So far count has been outputting to the terminal,
+but what if we have to communicate back to the go routine.
 well for this we can accept a channel as an argument
-
-
-
 */
 
 func main() {
@@ -28,11 +25,12 @@ func main() {
 	go count32(arr, ch)
 	for {
 		sum, open := <-ch
+		fmt.Println("Intermediate Sum: ", sum)
 		if !open {
+			fmt.Println("Final Sum: ", sum)
 			fmt.Println("breaking ")
 			break
 		}
-		fmt.Println("Intermediate Sum: ", sum)
 	}
 	// or
 	fmt.Println("*****3.3*****")
