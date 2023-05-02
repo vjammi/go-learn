@@ -23,7 +23,7 @@
 2. Flow control statements: for, if, else, switch and defer - how to control the flow of code with conditionals, loops, switches and defers.
     - Flow control statements: for, if. else, switch and defer
     - for, for is Go's "while"
-    - f, If with short statement
+    - if, If with short statement
     - if and else
     - switch, switch evaluation order, switch with no condition
     - defer, stacking defers
@@ -68,7 +68,6 @@ Define methods on types, declare interfaces
 6. Default Selection
 7. sync.Mutex
    Exercise: Web crawler
-
 
 ### GO Installation
 Installation
