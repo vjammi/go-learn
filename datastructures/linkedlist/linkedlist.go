@@ -21,6 +21,9 @@ func New() *LinkedList {
 	list.tail = nil
 	list.length = 0
 
+	//var list LinkedList = LinkedList{nil, nil, 3}
+	//fmt.Println(list)
+
 	// list := &LinkedList{head: nil, tail: nil, length: 0}
 
 	// var list *LinkedList = new(LinkedList)
@@ -30,6 +33,7 @@ func New() *LinkedList {
 	return list // Will return a parameter type of *LinkedList
 }
 
+// AddNode method has a receiver of type LinkedList named list
 func (list *LinkedList) AddNode(val int) {
 	// node := &ListNode{}
 
@@ -53,6 +57,7 @@ func (list *LinkedList) AddNode(val int) {
 	return
 }
 
+// Len method has a receiver of type LinkedList named list
 func (list *LinkedList) Len() int {
 	return list.length
 }

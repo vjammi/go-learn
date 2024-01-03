@@ -41,7 +41,8 @@
 ### Methods and interfaces
 Define methods on types, declare interfaces
 1. Methods and interfaces. This covers methods and interfaces, constructs that define objects and their behavior.
-    - Methods, methods and functions, Pointer receivers, Pointers and functions
+    - Methods, Methods and functions - A method is a function with a special receiver argument. 
+    - Pointer receivers, Pointers and functions
     - Methods and pointer indirection
     - Choosing a value or a pointer receiver
     - Interfaces, Interfaces implemented implicitly

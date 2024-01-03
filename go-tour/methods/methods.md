@@ -165,10 +165,12 @@ func ScaleFunc(v *Vertex, f float64) {
 	v.Y = v.Y * f
 }
 
-//For the statement v.Scale(5), even though v is a value and not a pointer, 
-//the method with the pointer receiver is called automatically.
-//That is, as a convenience, Go interprets the statement v.Scale(5) as (&v).Scale(5) 
-//since the Scale method has a pointer receiver.
+```
+For the statement v.Scale(5), even though v is a value and not a pointer, 
+the method with the pointer receiver is called automatically.
+That is, as a convenience, Go interprets the statement v.Scale(5) as (&v).Scale(5) 
+since the Scale method has a pointer receiver.
+```
 func main() {
 	v := Vertex4{3, 4}
 	v.Scale4(2)    // Go interprets this as (&v).Scale4(2)
